@@ -18,6 +18,7 @@ git clone https://github.com/CTXz/grub_uefi_settings_entry.git
 As a result, a local copy of the repository will be located under the current directory
 
 #### Method 1 - Make
+---
 To install and add the entry to your grub bootloader, execute the following command with _su_ rights inside the repository
 ```sh
 $ make install
@@ -29,6 +30,7 @@ $ make uninstall
 ```
 
 #### Method 2 - Install scripts
+---
 To install and add the entry to your grub bootloader, execute the following command with _su_ rights inside the repository
 ```sh
 $ sh install.sh [PRIORITY] [MKCONFIG] [MKCONFIG_OUT] [CUSTOM_ENTRY_DIR]
@@ -49,6 +51,7 @@ Args:
 |`CUSTOM_ENTRY_DIR`|Defines grub directory for custom menu entries|`/etc/grub.d/`|
 
 #### Method 3 - Manual installation
+---
 1. Copy the entry script with a assigned priority (say `50`) into the grub custom entry directory, which by default, is located under `/etc/grub.d/`
 ```sh
 $ cp uefi-firmware /etc/grub.d/50_uefi-firmware
