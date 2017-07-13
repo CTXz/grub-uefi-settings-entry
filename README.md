@@ -43,12 +43,12 @@ Args:
 
 |Name|Description|Default value|
 |----|-----------|-------------|
-|PRIORITY|Defines the entries read priority, which is prefixed ot the script (ex. `50_uefi-firmware`). The higher the number the higher the priority.|50|
-|MKCONFIG|Defines the grub-mkconfig tool/executable. Depending on the distribution, this may differ. Ex. Debian based systems use the update-grub script, arch uses the standart grub-mkconfig where most distros however use grub2-mkconfig|Detected|
-|MKCONFIG_OUT|Defines output paramter path (`-o`) of the MKCONFIG tool.|`/boot/grub/grub.cfg`|
-|CUSTOM_ENTRY_DIR|Defines grub directory for custom menu entries|`/etc/grub.d/`|
+|`PRIORITY`|Defines the entries read priority, which is prefixed ot the script (ex. `50_uefi-firmware`). The higher the number the higher the priority.|50|
+|`MKCONFIG`|Defines the grub-mkconfig tool/executable. Depending on the distribution, this may differ. Ex. Debian based systems use the update-grub script, arch uses the standart grub-mkconfig where most distros however use grub2-mkconfig|Detected|
+|`MKCONFIG_OUT`|Defines output paramter path (`-o`) of the MKCONFIG tool.|`/boot/grub/grub.cfg`|
+|`CUSTOM_ENTRY_DIR`|Defines grub directory for custom menu entries|`/etc/grub.d/`|
 
-##### Method 3 - Manual installation
+#### Method 3 - Manual installation
 1. Copy the entry script with a assigned priority (say `50`) into the grub custom entry directory, which by default, is located under `/etc/grub.d/`
 ```sh
 $ cp uefi-firmware /etc/grub.d/50_uefi-firmware
